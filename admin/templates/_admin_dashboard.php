@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col lg-5">
                     <div class="user_name">
-                        <h2>Welcome <strong><?php foreach($admin->getSessionData($_SESSION['login']) as $item){
+                        <h2>Welcome <strong><?php foreach($admin->getSessionData($_SESSION['Admin_login']) as $item){
                             echo $item['firstname'].' '.$item['lastname'];
                         }
                         ;?></strong></h2>

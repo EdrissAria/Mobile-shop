@@ -65,7 +65,7 @@
         <ul class="bottom_sidebar_icon">
             <li><a href="#"><img src="./img/message.png"></a><span class="badge">2</span></li>
             <li>
-            <?php foreach($admin->getSessionData($_SESSION['login']) as $item){
+            <?php foreach($admin->getSessionData($_SESSION['Admin_login']) as $item){
                     printf("<img src='upload/%s' class='profile'>", $item['photo']);
                 }
             ;?>

@@ -34,7 +34,7 @@ class Admin {
             $result = $this->db->con->query($query);
             $row = mysqli_num_rows($result); 
             if($row == 1){
-                $_SESSION['login'] = $username;
+                $_SESSION['Admin_login'] = $username;
                 header('location: dashboard.php');
             }else{
                 header("location: login.php?login=failed");
