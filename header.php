@@ -132,7 +132,7 @@
                             <input type="password" name="password" id="password" class="form-control" required placeholder="your password">
                             </div>
                             <div class="form-group">
-                            <input type="submit" value="Sign In" name="signin_submit" class="btn btn-info">
+                            <input type="submit" value="Sign In" name="signup_submit" class="btn btn-info">
                             </div>
                         </form>
                         </div>

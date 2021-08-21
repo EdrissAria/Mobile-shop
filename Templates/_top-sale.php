@@ -12,16 +12,9 @@
                 // hassing password 
                 $password = $_POST["password"];
                 $hashpassword = md5($password);
-
-                $user->insertUser(
-                    $_POST['firstname'],
-                    $_POST['lastname'],
-                    $_POST['username'],
-                    $_POST['email'],
-                    $hashpassword,
-                    $_POST['phone'],
-                    $_POST['address'],
-                    $datetime
+                $user->signinUser(
+                   $_POST["email"],
+                   $_POST["password"]
                 );
             }
             if(isset($_POST['login_submit'])){
