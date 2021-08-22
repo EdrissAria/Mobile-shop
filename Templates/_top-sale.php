@@ -14,16 +14,14 @@
                 $hashpassword = md5($password);
                 $user->signinUser(
                    $_POST["email"],
-                   $_POST["password"]
+                   $hashpassword
                 );
             }
             if(isset($_POST['login_submit'])){
                 // hassing password 
                 $password = $_POST["password"];
                 $hashpassword = md5($password);
-
                 $user->getUser($_POST['email'], $hashpassword);
-                  
             }
         }  
     } 

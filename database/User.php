@@ -15,7 +15,6 @@ class User{
 
     // sign up users into database 
     public function signinUser($email = null, $password = null){
-                    
         if($email != null && $password != null){
             $query = "INSERT INTO users (email, password) VALUES ('$email','$password');";
             $result = $this->db->con->query($query);
@@ -26,17 +25,14 @@ class User{
             return $result;
         }
     }
-    
     // select user 
-
     public function getUser($email = null, $password = null, $table = "users"){
         $command = "SELECT * FROM $table WHERE email = '$email' AND password = '$password';";
         $result = $this->db->con->query($command);
-        $row = mysqli_fetch_array($result);
-       
-        if($row){
+        $row = mysqli_num_rows($result);
+        if($row == 1){
             $_SESSION['login'] = $row['user_id'];
-            header("location:".$_SERVER["PHP_SELF"]);
+            header("location:".$_SERVER["PHP_SELF"].'?login=success');
         }else{
             header("location:".$_SERVER["PHP_SELF"].'?login=failed');
         }
