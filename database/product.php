@@ -71,7 +71,6 @@ class Product{
     public function loginUser($email, $password, $table = "users"){
         if(isset($email) && isset($password)){
             $result = $this->db->con->query("INSERT INTO '$table' (email, password) VALUES ('$email','$password')");
-
             if($result){
                 header("location:".$_SERVER['PHP_SELF']."?LOGIN=SUCCESS");
             }else{

@@ -40,8 +40,9 @@
             <div class="strip d-flex justify-content-between px-4 py-1 bg-light">
                 <p class="font-calibri font-size-12 text-black-50 m-0">Jorden Calderen 430-985 Eleifend St.Duluth Washington 92611(427) 987-98798</p>
                 <div class="font-calibri font-size-14">
-                    <?php isset($_SESSION['login'])? print('<a href="database/session.php" class="font-size-14 py-0 px-2  border-right text-danger">Log Out</a>') : '';?>
-                    <button type="button" class="btn btn-link font-size-14 py-0 my-0 text-dark" data-toggle="modal" data-target="#modelId">Login</button>
+                    <button type="button" class="btn btn-link font-size-14 py-0 my-0 text-dark border-left" data-toggle="modal" data-target="#modelId">
+                    <?php echo isset($_SESSION['login'])? '<a href="database/session.php" class="font-size-14 py-0 px-2 text-danger">Log Out</a>' : 'Login';?>
+                    </button>
                  </div>
             </div>
             <!-- primary navigation -->
@@ -103,7 +104,7 @@
                             </div>
                             <div class="login-signin">
                                 <input type="submit" value="login" name="login_submit" class="btn btn-info">
-                                <button type="button" class="btn btn-link py-0 my-0 text-dark" data-toggle="modal" data-target="#modelId2">Sign In</button>
+                                <button type="button" class="btn btn-link py-0 my-0 text-dark" data-toggle="modal" data-target="#modelId2" data-dismiss="modal">Sign In</button>
                             </div>
                         </form>
                         </div>
